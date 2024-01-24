@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "animate.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.ping-button {
+    animation: pulse 1500ms infinite !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.check-svg {
+    animation: svgScale 0.5s ease-in-out infinite;
+}
+
+.download-arrow {
+    transition: transform 0.2s linear;
+    animation: arrowMove 0.5s linear infinite alternate;
+}
+
+@keyframes arrowMove {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(2px);
+        /* Ubah nilai px sesuai keinginan Anda */
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: #65a30d 0 0 0 0;
+    }
+
+    75% {
+        box-shadow: #f0f9ff 0 0 0 10px;
+    }
+}
